@@ -5,7 +5,7 @@
 
 module.exports = {
 	// Specify the root component to start processing jsx
-  entry: "./app/components/Main.js",
+  entry: "./app/App.js",
   output: {
   	// Output of compiling file
     filename: "public/bundle.js"

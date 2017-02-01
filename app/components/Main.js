@@ -1,15 +1,22 @@
-var React = require('react');
-var ReactDOM = require('react-dom')
 // Creating a react component
+var React = require('react');
+
 var Main = React.createClass({
-	// Render: specify what the UI will looks like for this element
+// Render: specify what the UI will looks like for this element
   render: function(){
     return (
-      <div>
-        Hello World
+      <div className="main-container">
+        <nav className="navbar navbar-default" role="navigation">
+          <div className="col-sm-7 col-sm-offset-2" style={{marginTop: 15}}>
+            MENU
+          </div>
+        </nav>
+        <div className="container">
+          {this.props.children}
+        </div>
       </div>
     )
   }
 });
-// React dom will take the component (first arg), put it in the specify placed in the html (second arg)
-ReactDOM.render(<Main />, document.getElementById('app'));
+
+module.exports = Main;
